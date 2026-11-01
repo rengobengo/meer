@@ -265,4 +265,9 @@ nav a:hover {
   .booking-form {
     padding: 1.25rem;
   }
+
+}
+/* Button in Sektionen mittig ausrichten */
+.center {
+  text-align: center;
 }
