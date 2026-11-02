@@ -3,49 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fischladen Meerblau</title>
+  <title>Meerblau · Fischladen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="logo">Meerblau</a>
-      <nav>
+      <a href="index.html" class="logo"><span class="dot"></span>Meerblau</a>
+      <nav class="mono">
         <a href="#sortiment">Sortiment</a>
+        <a href="menu.html">Speisekarte</a>
         <a href="#oeffnungszeiten">Öffnungszeiten</a>
-        <a href="#buchung" class="btn-small">Termin buchen</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
+      <a href="tel:+490123456789" class="btn-outline mono">Anrufen</a>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container">
-      <h1>Frisch vom Kutter, direkt zu Ihnen</h1>
-      <p>Seit 1987 Ihr Fischfachgeschäft mit Tagesfang, Räucherwaren und fachkundiger Beratung.</p>
-      <a href="#buchung" class="btn">Beratungstermin buchen</a>
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="mono eyebrow anim anim-1">Fischfachgeschäft — seit 1987</p>
+      <p class="mono status anim anim-1">
+        <span class="status-dot"></span>Geöffnet · Mo–Sa
+      </p>
+
+      <h1 class="display">
+        <span class="line anim anim-2">Frisch vom</span>
+        <span class="line outline anim anim-3">Kutter</span>
+        <span class="line anim anim-4"><span class="red">Auf</span> den Teller<span class="red">.</span></span>
+      </h1>
+
+      <div class="hero-bottom anim anim-5">
+        <p>Tagesfang aus der Nordsee, eigene Räucherei und ehrliche Beratung. Ein kleiner Laden mit großem Fisch.</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn-red">Speisekarte ansehen</a>
+          <a href="tel:+490123456789" class="btn-outline">0123 456789</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container stats-inner">
+      <div><p class="mono muted">Seit</p><p class="display stat-num">1987</p></div>
+      <div><p class="mono muted">Tagesfang</p><p class="display stat-num">Nordsee</p></div>
+      <div><p class="mono muted">Eigene</p><p class="display stat-num">Räucherei</p></div>
+      <a href="tel:+490123456789" class="stat-cta">
+        <span class="display">Jetzt anrufen</span>
+        <span class="arrow">→</span>
+      </a>
     </div>
   </section>
 
   <section id="sortiment" class="section">
     <div class="container">
-      <h2>Unser Sortiment</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Frischfisch</h3>
-          <p>Tagesfang aus der Nordsee: Scholle, Dorsch, Seelachs und Hering, am Morgen eingetroffen und fachgerecht filetiert.</p>
+      <p class="mono eyebrow reveal">01 — Sortiment</p>
+      <h2 class="display section-title reveal">Was wir<br><span class="outline">verkaufen</span></h2>
+
+      <div class="list">
+        <article class="item reveal">
+          <span class="mono num">01</span>
+          <h3 class="display">Frischfisch</h3>
+          <p>Scholle, Dorsch, Seelachs und Hering, am Morgen eingetroffen und fachgerecht filetiert.</p>
         </article>
-        <article class="card">
-          <h3>Räucherfisch</h3>
-          <p>Heiß- und kaltgeräucherte Spezialitäten aus eigener Räucherei, zum Beispiel Makrele, Lachs und Forelle.</p>
+        <article class="item reveal">
+          <span class="mono num">02</span>
+          <h3 class="display">Räucherfisch</h3>
+          <p>Heiß- und kaltgeräuchert aus eigener Räucherei: Makrele, Lachs und Forelle.</p>
         </article>
-        <article class="card">
-          <h3>Feinkost</h3>
-          <p>Matjes, Heringssalate, Fischfrikadellen und hausgemachte Dips für Feiern und den Alltag.</p>
+        <article class="item reveal">
+          <span class="mono num">03</span>
+          <h3 class="display">Feinkost</h3>
+          <p>Matjes, Heringssalate, Fischfrikadellen und hausgemachte Dips.</p>
         </article>
-        <article class="card">
-          <h3>Aquaristik</h3>
-          <p>Wasserpflege, Futter und Zubehör für Süß- und Salzwasseraquarien, mit Wasserwerte-Check vor Ort.</p>
+        <article class="item reveal">
+          <span class="mono num">04</span>
+          <h3 class="display">Aquaristik</h3>
+          <p>Wasserpflege, Futter und Zubehör für Süß- und Salzwasser, mit Wasserwerte-Check vor Ort.</p>
         </article>
       </div>
     </div>
@@ -53,29 +92,31 @@
 
   <section id="oeffnungszeiten" class="section section-alt">
     <div class="container">
-      <h2>Öffnungszeiten</h2>
-      <table class="hours">
-        <tr><td>Montag bis Freitag</td><td>08:00 – 18:00 Uhr</td></tr>
-        <tr><td>Samstag</td><td>08:00 – 14:00 Uhr</td></tr>
-        <tr><td>Sonntag</td><td>geschlossen</td></tr>
-      </table>
+      <p class="mono eyebrow reveal">02 — Öffnungszeiten</p>
+      <h2 class="display section-title reveal">Wann<br><span class="outline">wir da sind</span></h2>
+
+      <ul class="hours reveal">
+        <li><span class="display">Mo – Fr</span><span class="mono">08:00 – 18:00 Uhr</span></li>
+        <li><span class="display">Samstag</span><span class="mono">08:00 – 14:00 Uhr</span></li>
+        <li><span class="display">Sonntag</span><span class="mono red-text">Geschlossen</span></li>
+      </ul>
     </div>
   </section>
 
-<section id="buchung" class="section">
-  <div class="container narrow">
-    <h2>Termin buchen</h2>
-    <p class="intro">Reservieren Sie Ihren Wunschtermin direkt bei uns.</p>
-    <div style="text-align: center; margin-top: 1.5rem;">
-      <a href="...." target="_blank" rel="noopener" class="btn">Jetzt Termin buchen</a>
-    </div>
-  </div>
-</section>
-  
-  <footer class="footer">
+  <section id="kontakt" class="contact">
     <div class="container">
-      <p>Fischladen Meerblau · Musterstraße 1 · 12345 Musterstadt · Tel. 0123 456789</p>
-      <p>Fiktive Website für Testzwecke</p>
+      <p class="mono eyebrow reveal">03 — Kontakt</p>
+      <a href="tel:+490123456789" class="display phone reveal">0123 456789</a>
+      <p class="mono muted reveal">Musterstraße 1 · 12345 Musterstadt</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner mono">
+      <span>© Meerblau · Fiktive Website für Testzwecke</span>
+      <span>
+        <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
+      </span>
     </div>
   </footer>
 
